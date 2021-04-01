@@ -1,6 +1,7 @@
 import React from 'react';
 import { Image, ScrollView } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
+import { useNavigation } from '@react-navigation/native';
 
 import Input from '../../components/Input';
 import Button from '../../components/Button';
@@ -17,6 +18,8 @@ import {
 import logoImg from '../../assets/logo.png';
 
 const SignIn: React.FC = () => {
+    const navigation = useNavigation();
+
     return (
         <>
             <ScrollView
@@ -38,7 +41,7 @@ const SignIn: React.FC = () => {
                 </Container>
             </ScrollView>
 
-            <CreateAccountButton onPress={() => { 'criar' }} >
+            <CreateAccountButton onPress={() => navigation.navigate('SignUp')} >
                 <Icon name="log-in" size={20} color="#ff9000" />
                 <CreateAccountButtonText>Criar uma conta</CreateAccountButtonText>
             </CreateAccountButton>
