@@ -37,3 +37,5 @@ export const BackToSignInText = styled.Text`
     font-family: 'RobotoSlab-Regular';
     margin-left: 16px;
 `;
+
+export const HackButton = styled.View``;
